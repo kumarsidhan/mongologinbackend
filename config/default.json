@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb://127.0.0.1:27017/authDB",
+    "jwtSecret": "qwerty8976khkhkh",
+    "refreshTokenSecret": "aadfasdfasdf;lk;'lk';lk;87878",
+    "refreshTokenExpire": "7d" 
+}

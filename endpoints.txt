@@ -1,0 +1,53 @@
+1. Register User
+    REQ: POST
+    URL: http://localhost:5000/api/auth/register
+    Body (form-data):
+    Key: name, Value: ram
+    Key: email, Value: ram@example.com
+    Key: password, Value: password123
+    Key: image, Type: File, Choose a file to upload
+
+2. Login User
+
+    REQ : POST
+    URL: http://localhost:5000/api/auth/login
+    Body (raw JSON):
+    {
+    "email": "ram@example.com",
+    "password": "password123"
+    }
+
+3. Forgot Password
+
+REQ : POST
+URL: http://localhost:5000/api/auth/forgot-password
+Body (raw JSON):
+    {
+        "email": "ram@example.com"
+    }
+
+4. Reset Password
+
+    REQ : POST
+    URL: http://localhost:5000/api/auth/reset-password
+    Body (raw JSON):
+    {
+        "email": "ram@example.com",
+        "otp": "123456",  
+        "newPassword": "newpassword123"
+    }
+
+5. Logout User
+
+REQ : POST
+URL: http://localhost:5000/api/auth/logout
+Headers:x-auth-token: your_jwt_token
+
+6.Refresh Token
+
+REQ : POST
+URL: http://localhost:5000/api/auth/refresh-token
+Body: raw (JSON)
+    {
+    "refreshToken": "your_refresh_token"
+    }
